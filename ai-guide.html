@@ -99,15 +99,39 @@
           <div class="step-card__n">02</div>
           <div>
             <h4>套用 Prompt 模板，填入尺寸与设计需求</h4>
-            <p>将数值与您想要的材质、颜色、风格填入下方模板：</p>
-            <code>一张专业奢侈品级手表产品摄影图，正面45度角视角，纯色简约背景，柔和影棚灯光，无手腕/手部出现。
+            <p>将数值与您想要的材质、颜色、风格填入下方模板。按需选择生成"原型规格图"或"实物渲染图"：</p>
+            <div class="tpl-tabs">
+              <button class="tpl-tab is-active" data-tpl="proto" type="button">原型规格图 Prompt</button>
+              <button class="tpl-tab" data-tpl="render" type="button">实物渲染图 Prompt</button>
+            </div>
+            <div class="tpl-panel is-active" data-tpl="proto">
+              <code>一张工业设计风格的手表表壳工程规格图，黑白线稿，白色背景，包含正视图与侧视图剖面。
+
+表壳直径：40.00mm
+表盘开孔直径：38.50mm
+表壳厚度：7.00mm
+表耳间距（表带宽度）：22.70mm
+表圈倒角角度：64°
+表壳材质：316L不锈钢
+表壳造型：圆形直身表壳
+表耳造型：一体式直角表耳
+表冠位置与直径：3点位置，直径6.0mm
+特殊设计元素：表圈单向旋转刻度圈
+
+风格要求：CAD工程图风格，标注清晰的尺寸线与数值，线条精细，无阴影渲染，专业机械制图美学。</code>
+              <p class="tpl-hint">提示：将以上数值替换为您所选模具型号的实际尺寸即可直接使用。</p>
+            </div>
+            <div class="tpl-panel" data-tpl="render">
+              <code>一张专业奢侈品级手表产品摄影图，正面45度角视角，纯色简约背景，柔和影棚灯光，无手腕/手部出现。
 
 表壳：40.00mm 拉丝不锈钢，圆形直身表壳
 表圈：黑色陶瓷单向旋转刻度圈，素面抛光
 表盘：深蓝色太阳放射纹表盘，白色棒形夜光指针
+表冠：抛光不锈钢表冠，3点位置
 表带：不锈钢三节链带，蝴蝶扣
 
 灯光与质感：影棚柔光箱布光，金属高光反射自然，材质细节清晰可见，摄影级真实质感，8K超高清商业产品摄影，焦点清晰。</code>
+            </div>
           </div>
         </div>
         <div class="step-card">
@@ -115,7 +139,7 @@
           <div>
             <h4>附加统一负面提示词，减少常见生成错误</h4>
             <p>建议粘贴在正向 Prompt 后，避免比例失真、多余指针、文字乱码等问题：</p>
-            <code>负面提示词（避免出现）：比例失真、表壳变形、多余或缺失指针、表盘文字模糊或乱码、多余水印、多余logo、手腕或手部出现、背景杂乱、双重曝光、过度曝光死白、噪点颗粒过重、卡通风格、低分辨率、模糊失焦。</code>
+            <code>负面提示词（避免出现）：比例失真、表壳变形、多余或缺失指针、表盘文字模糊或乱码、多余水印、多余logo、手腕或手部出现、背景杂乱、双重曝光、镜像重复图案错位、过度曝光死白、噪点颗粒过重、卡通风格、低分辨率、模糊失焦。</code>
           </div>
         </div>
         <div class="step-card">
@@ -125,6 +149,52 @@
             <p>看中某个材质或配色方向后，回到<a href="configurator.html">自定义设计页</a>，在结构化选项中选择最接近的组合——这一步生成的才是可生产、可报价的正式效果图。</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KEYWORD LIBRARY ============ -->
+  <section class="section section--dim section--tight">
+    <div class="container">
+      <div class="section__head">
+        <div class="section__eyebrow">常用词汇</div>
+        <h2>材质与风格关键词，可直接替换填入 Prompt</h2>
+      </div>
+      <table class="boundary-table keyword-table">
+        <thead>
+          <tr><th>类别</th><th>可选关键词</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>表壳材质</td><td>316L不锈钢、904L不锈钢、钛合金、黄铜、陶瓷、青铜（做旧）、18K金</td></tr>
+          <tr><td>表面处理</td><td>拉丝、抛光、喷砂、PVD镀金 / 镀黑 / 镀玫灰金</td></tr>
+          <tr><td>表盘图案</td><td>太阳放射纹、格纹（guilloché）、珠光贝母、渐变色、哑光素面、镂空骷髅</td></tr>
+          <tr><td>表带材质</td><td>牛皮（压线/素面）、鳄鱼纹皮、橡胶、尼龙表带（NATO）、不锈钢链带、陶瓷链带</td></tr>
+          <tr><td>风格定位</td><td>复古怀旧、极简现代、运动潜水、赛车计时、轻奢商务</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section__head">
+        <div class="section__eyebrow">常见问题</div>
+        <h2>关于 AI 自助设计的几个疑问</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>不知道材质或工艺的专业术语怎么办？</summary>
+          <p>可以用通俗描述替代，例如用"哑光深灰色金属"代替"钛合金喷砂处理"，AI 仍可生成，只是细节还原度会略有下降。</p>
+        </details>
+        <details class="faq-item">
+          <summary>想在同一张图里体现多个视角（正视图 + 侧视图）怎么办？</summary>
+          <p>原型规格图 Prompt 已默认包含"正视图与侧视图剖面"。如需俯视图或表背视图，可在 Prompt 末尾追加一句"同时提供俯视图 / 表背视图"。</p>
+        </details>
+        <details class="faq-item">
+          <summary>生成图和真实工艺存在细节差异，正常吗？</summary>
+          <p>正常。AI 生成图仅用于设计沟通与效果预览，最终以实际打样与 CAD 图纸为准。</p>
+        </details>
       </div>
     </div>
   </section>
@@ -162,5 +232,6 @@
 </a>
 
 <script src="js/main.js"></script>
+<script src="js/ai-guide.js"></script>
 </body>
 </html>
