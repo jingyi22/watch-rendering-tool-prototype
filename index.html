@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>效果图在线生成工具 — 手表代工报价前置工具</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__bar">
+    <a href="index.html" class="site-header__brand">设计图纸 <small>WATCH RENDER TOOL</small></a>
+    <nav class="site-header__nav">
+      <a href="full-custom.html">全非标定制</a>
+      <a href="mold-select.html">小批量半定制</a>
+      <a href="#how">工作原理</a>
+    </nav>
+    <div class="site-header__actions">
+      <a href="inquiry.html" class="btn btn--primary btn--sm">获取报价</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <div class="hero__eyebrow">报价前置 · 效果图生成</div>
+        <h1>把一张模具规格图，<br>变成您能看懂的<em>设计效果图</em></h1>
+        <p class="hero__sub">
+          无论您需要全新开模的全非标定制，还是在现有模具范围内做小批量半定制，都能在询盘之前先把设计意图说清楚——用图说话，而不是用文字猜测。
+        </p>
+        <div class="hero__ctas">
+          <a href="full-custom.html" class="btn btn--outline">全非标定制 →</a>
+          <a href="mold-select.html" class="btn btn--primary">小批量半定制 →</a>
+        </div>
+      </div>
+      <div class="morph" id="heroMorph" tabindex="0" role="button" aria-pressed="false" aria-label="点击切换查看规格图与渲染图">
+        <span class="morph__hint">点击切换</span>
+        <div class="morph__layer morph__layer--blueprint">
+          <img src="assets/blueprint_1.svg" alt="手表表壳工程规格图，标注直径、厚度等尺寸">
+        </div>
+        <div class="morph__layer morph__layer--render">
+          <img src="assets/render_sample_1.png" alt="同一款设计的实物渲染效果图">
+        </div>
+        <span class="morph__tag" id="morphTag">规格图</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHICH TRACK ============ -->
+  <section class="section section--tight" id="which-track">
+    <div class="container">
+      <div class="guidance">
+        <div class="guidance__icon">?</div>
+        <div>
+          <h4>不确定该选哪一种？</h4>
+          <p>核心判断标准是「数量」与「是否接受现有模具」。预估 300 件以上、且愿意为专属造型开新模 → 全非标定制；300 件以下、可在现有模具库中选型 → 小批量半定制，门槛更低、起量更小（30 件起）。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TWO TIERS ============ -->
+  <section class="section" id="tiers">
+    <div class="container">
+      <div class="section__head">
+        <div class="section__eyebrow">两种合作方式</div>
+        <h2>两种合作方式，服务路径完全不同</h2>
+        <p>一个为专属造型而生，一个为快速起量而生。选对路径，报价与周期才会准确。</p>
+      </div>
+
+      <div class="tiers">
+        <!-- Full custom -->
+        <article class="tier-card">
+          <div class="tier-card__kicker">全新开模</div>
+          <h3>全非标定制</h3>
+          <p class="tier-card__desc">从零设计表壳造型，不受现有模具库限制，适合希望打造专属外观、建立品牌差异化的客户。</p>
+          <dl class="tier-card__meta">
+            <div><dt>起订量</dt><dd>≥ 300 件</dd></div>
+            <div><dt>开模</dt><dd>允许全新开模</dd></div>
+            <div><dt>设计自由度</dt><dd>不受限</dd></div>
+            <div><dt>报价方式</dt><dd>人工销售对接</dd></div>
+          </dl>
+          <ul class="tier-card__list">
+            <li>表壳结构与工艺细节完全由您主导，不受现有模具限制</li>
+            <li>由销售顾问与您一对一确认设计稿、CAD 图纸与开模细节</li>
+            <li>适合已有明确设计方向，或正在建立自有产品线的品牌</li>
+          </ul>
+          <a href="full-custom.html" class="btn btn--outline btn--block">了解全非标定制流程</a>
+        </article>
+
+        <!-- Semi custom -->
+        <article class="tier-card tier-card--semi">
+          <div class="tier-card__kicker">现有模具</div>
+          <h3>小批量半定制</h3>
+          <p class="tier-card__desc">在现有模具规格范围内，组合材质、表盘、表带等要素，并用 AI 工具即时生成效果图预览。</p>
+          <dl class="tier-card__meta">
+            <div><dt>起订量</dt><dd>30 件起</dd></div>
+            <div><dt>开模</dt><dd>仅限现有模具</dd></div>
+            <div><dt>设计自由度</dt><dd>模具尺寸内自定义</dd></div>
+            <div><dt>报价方式</dt><dd>在线配置 + 询盘</dd></div>
+          </dl>
+          <ul class="tier-card__list">
+            <li>提供模具型号卡片选择、结构化设计选项面板</li>
+            <li>支持生成「原型规格图」与「实物渲染图」两种效果图</li>
+            <li>适合快速打样、试水新渠道或控制起订成本的客户</li>
+          </ul>
+          <a href="mold-select.html" class="btn btn--primary btn--block">开始选择模具型号</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS (semi-custom flow preview) ============ -->
+  <section class="section section--dim" id="how">
+    <div class="container">
+      <div class="section__head">
+        <div class="section__eyebrow">小批量半定制 · 五步流程</div>
+        <h2>从选模具到拿到效果图，五步完成</h2>
+        <p>从选模具到拿到效果图，设计参数会自动带入最终的询盘单，无需重复填写。</p>
+      </div>
+      <div class="flow">
+        <div class="flow-step">
+          <span class="flow-step__n">01</span>
+          <h4>选择模具型号</h4>
+          <p>浏览现有模具规格卡片，确认表壳尺寸范围</p>
+        </div>
+        <div class="flow-step">
+          <span class="flow-step__n">02</span>
+          <h4>组合设计选项</h4>
+          <p>材质、表面处理、表盘、表带等结构化选择</p>
+        </div>
+        <div class="flow-step">
+          <span class="flow-step__n">03</span>
+          <h4>AI 自助设计（可选）</h4>
+          <p>用 ChatGPT / Gemini 在模具尺寸约束内头脑风暴</p>
+        </div>
+        <div class="flow-step">
+          <span class="flow-step__n">04</span>
+          <h4>生成效果图</h4>
+          <p>一键生成原型规格图与实物渲染图，可反复调整</p>
+        </div>
+        <div class="flow-step">
+          <span class="flow-step__n">05</span>
+          <h4>提交询盘</h4>
+          <p>设计参数与效果图自动附带，无需重复描述需求</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section__head">
+        <div class="section__eyebrow">示例 · 已有模具的真实设计</div>
+        <h2>看看别的客户在现有模具上做出了什么</h2>
+      </div>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="assets/render_sample_1.png" alt="本本石极简款渲染图">
+          <div class="gallery-item__cap">方案一「本本石」极简款 · Ø40mm</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/render_sample_2.png" alt="Ramesses 设计渲染图">
+          <div class="gallery-item__cap">方案二「Ramesses」主题款</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/render_sample_3.png" alt="Sungift 设计渲染图">
+          <div class="gallery-item__cap">方案三「Sungift」限定款</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="ruler-divider">准备好了吗</div>
+      <div class="guidance" style="align-items:center;">
+        <div class="guidance__icon">→</div>
+        <div style="flex:1;">
+          <h4>两条路径，随时可以切换</h4>
+          <p>即便从小批量半定制开始，后续想转向全非标开模，也可以直接联系销售顾问评估。</p>
+        </div>
+        <a href="inquiry.html" class="btn btn--brass">获取报价</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>设计图纸 WATCH RENDER TOOL · 手表代工设计与报价平台</div>
+    <div>工作日 9:00–18:00 · 响应询盘 24 小时内</div>
+  </div>
+</footer>
+
+<a href="#" class="float-whatsapp" aria-label="通过 WhatsApp 联系我们">
+  <span class="float-whatsapp__dot"></span> WhatsApp 咨询
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

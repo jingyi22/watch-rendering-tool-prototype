@@ -1,0 +1,77 @@
+/* ===== Mold Select ===== */
+
+.mold-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+.mold-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+.mold-card:hover { border-color: var(--steel); box-shadow: 0 10px 24px rgba(27,36,48,0.08); }
+.mold-card__thumb {
+  background: var(--paper-dim);
+  padding: var(--space-3);
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--line);
+}
+.mold-card__thumb img { max-height: 100%; }
+.mold-card__body { padding: var(--space-3); flex: 1; display: flex; flex-direction: column; }
+.mold-card__id {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.3em;
+}
+.mold-card__body h3 { font-size: 1.05rem; margin-bottom: var(--space-1); }
+.mold-card__specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-bottom: var(--space-2);
+}
+.mold-card__specs span {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--steel);
+  background: rgba(74,90,104,0.08);
+  padding: 0.25em 0.55em;
+  border-radius: var(--radius-s);
+}
+.mold-card__desc { font-size: 0.85rem; color: var(--ink-soft); margin-bottom: var(--space-3); flex: 1; }
+
+.filter-bar {
+  display: flex;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+}
+.filter-chip {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 0.4em 0.9em;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-soft);
+  background: #fff;
+  transition: all var(--dur-fast) var(--ease);
+}
+.filter-chip:hover { border-color: var(--steel); color: var(--ink); }
+.filter-chip.is-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+@media (max-width: 980px) {
+  .mold-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 620px) {
+  .mold-grid { grid-template-columns: 1fr; }
+}

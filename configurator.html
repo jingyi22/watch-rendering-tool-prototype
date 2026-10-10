@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自定义设计 — 小批量半定制</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/configurator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__bar">
+    <a href="index.html" class="site-header__brand">设计图纸 <small>WATCH RENDER TOOL</small></a>
+    <nav class="site-header__nav">
+      <a href="full-custom.html">全非标定制</a>
+      <a href="mold-select.html" class="is-active">小批量半定制</a>
+      <a href="index.html#how">工作原理</a>
+    </nav>
+    <div class="site-header__actions">
+      <a href="inquiry.html" class="btn btn--primary btn--sm">获取报价</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" style="padding: var(--space-4) 0 var(--space-3);">
+    <div class="container">
+      <div class="hero__eyebrow">第 2 步 / 5</div>
+      <h1 style="font-size: var(--fs-h1);">组合您的设计选项</h1>
+      <p class="hero__sub" style="max-width: none;">基于 <strong>MOLD-001 本本石</strong>（Ø40.0mm 圆形直身）的固定结构，以下选项均为真实可生产的材质与工艺组合。</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+
+      <div class="ai-guide-teaser">
+        <div class="ai-guide-teaser__icon">AI</div>
+        <p>没有设计灵感？可以先用 ChatGPT / Gemini 在模具尺寸约束内头脑风暴，再回来选择最接近的选项。</p>
+        <a href="ai-guide.html">查看 AI 自助设计指南 →</a>
+      </div>
+
+      <div class="configurator">
+
+        <!-- LEFT: option panels -->
+        <div class="options-col">
+
+          <button class="random-btn" id="randomBtn" type="button">⟲ 随机搭配一套方案</button>
+
+          <div class="option-group">
+            <div class="option-group__head">
+              <h3>表壳材质</h3>
+              <span>CASE MATERIAL</span>
+            </div>
+            <div class="swatch-grid" data-group="material">
+              <button class="swatch is-selected" data-value="316L不锈钢" style="--c:#B9BEC2;"><span class="swatch__chip" style="background:#B9BEC2;"></span><span>316L不锈钢</span></button>
+              <button class="swatch" data-value="钛合金"><span class="swatch__chip" style="background:#8A8D90;"></span><span>钛合金</span></button>
+              <button class="swatch" data-value="陶瓷"><span class="swatch__chip" style="background:#232323;"></span><span>陶瓷（黑）</span></button>
+              <button class="swatch" data-value="青铜做旧"><span class="swatch__chip" style="background:#8C6239;"></span><span>青铜做旧</span></button>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <div class="option-group__head">
+              <h3>表面处理</h3>
+              <span>FINISH</span>
+            </div>
+            <div class="swatch-grid" data-group="finish">
+              <button class="swatch is-selected" data-value="拉丝"><span class="swatch__chip" style="background:linear-gradient(135deg,#d8d8d8,#aaa);"></span><span>拉丝</span></button>
+              <button class="swatch" data-value="抛光"><span class="swatch__chip" style="background:linear-gradient(135deg,#fff,#9ab);"></span><span>抛光</span></button>
+              <button class="swatch" data-value="PVD镀金"><span class="swatch__chip" style="background:linear-gradient(135deg,#e9c46a,#b8860b);"></span><span>PVD镀金</span></button>
+              <button class="swatch" data-value="PVD镀黑"><span class="swatch__chip" style="background:#1a1a1a;"></span><span>PVD镀黑</span></button>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <div class="option-group__head">
+              <h3>表盘图案</h3>
+              <span>DIAL PATTERN</span>
+            </div>
+            <div class="swatch-grid" data-group="dial">
+              <button class="swatch is-selected" data-value="太阳放射纹"><span class="swatch__chip" style="background:conic-gradient(#1B2430,#4A5A68,#1B2430);"></span><span>太阳放射纹</span></button>
+              <button class="swatch" data-value="格纹"><span class="swatch__chip" style="background:repeating-linear-gradient(45deg,#333 0 4px,#555 4px 8px);"></span><span>格纹</span></button>
+              <button class="swatch" data-value="珠光贝母"><span class="swatch__chip" style="background:linear-gradient(135deg,#f3e9f7,#cbd6e2);"></span><span>珠光贝母</span></button>
+              <button class="swatch" data-value="哑光素面"><span class="swatch__chip" style="background:#2b2f33;"></span><span>哑光素面</span></button>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <div class="option-group__head">
+              <h3>指针风格</h3>
+              <span>HANDS</span>
+            </div>
+            <div class="swatch-grid" data-group="hands">
+              <button class="swatch is-selected" data-value="剑形指针"><span class="swatch__chip" style="background:#eee;"></span><span>剑形指针</span></button>
+              <button class="swatch" data-value="棒形指针"><span class="swatch__chip" style="background:#eee;"></span><span>棒形指针</span></button>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <div class="option-group__head">
+              <h3>表带材质</h3>
+              <span>STRAP</span>
+            </div>
+            <div class="swatch-grid" data-group="strap">
+              <button class="swatch is-selected" data-value="棕色牛皮"><span class="swatch__chip" style="background:#4a3527;"></span><span>棕色牛皮</span></button>
+              <button class="swatch" data-value="黑色橡胶"><span class="swatch__chip" style="background:#1c1c1c;"></span><span>黑色橡胶</span></button>
+              <button class="swatch" data-value="不锈钢链带"><span class="swatch__chip" style="background:#c7cbcd;"></span><span>不锈钢链带</span></button>
+              <button class="swatch" data-value="NATO尼龙"><span class="swatch__chip" style="background:#3a4a3a;"></span><span>NATO尼龙</span></button>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <div class="option-group__head">
+              <h3>机芯</h3>
+              <span>MOVEMENT</span>
+            </div>
+            <div class="swatch-grid" data-group="movement">
+              <button class="swatch is-selected" data-value="石英机芯"><span class="swatch__chip" style="background:#ddd;"></span><span>石英机芯</span></button>
+              <button class="swatch" data-value="自动机械"><span class="swatch__chip" style="background:#ddd;"></span><span>自动机械</span></button>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <div class="option-group__head">
+              <h3>特殊设计元素</h3>
+              <span>SPECIAL · 选填</span>
+            </div>
+            <div class="swatch-grid" data-group="special">
+              <button class="swatch is-selected" data-value="无"><span class="swatch__chip" style="background:#f0f0f0;"></span><span>无</span></button>
+              <button class="swatch" data-value="12点图腾装饰"><span class="swatch__chip" style="background:#e9c46a;"></span><span>12点图腾装饰</span></button>
+              <button class="swatch" data-value="表圈镶嵌位"><span class="swatch__chip" style="background:#dde;"></span><span>表圈镶嵌位</span></button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: live preview -->
+        <aside class="preview-panel">
+          <div class="preview-panel__stage">
+            <span class="preview-panel__badge">实时预览 · 示意</span>
+            <img src="assets/render_sample_1.png" alt="当前设计组合预览" id="previewImg">
+          </div>
+          <div class="preview-panel__summary">
+            <h4>当前方案</h4>
+            <dl class="summary-list" id="summaryList">
+              <dt>模具</dt><dd>MOLD-001 本本石</dd>
+              <dt>材质</dt><dd id="sum-material">316L不锈钢</dd>
+              <dt>表面处理</dt><dd id="sum-finish">拉丝</dd>
+              <dt>表盘</dt><dd id="sum-dial">太阳放射纹</dd>
+              <dt>指针</dt><dd id="sum-hands">剑形指针</dd>
+              <dt>表带</dt><dd id="sum-strap">棕色牛皮</dd>
+              <dt>机芯</dt><dd id="sum-movement">石英机芯</dd>
+            </dl>
+          </div>
+        </aside>
+
+      </div>
+
+      <div class="generate-bar">
+        <div class="generate-bar__types">
+          <label><input type="checkbox" checked> 原型规格图</label>
+          <label><input type="checkbox" checked> 实物渲染图</label>
+        </div>
+        <a href="result.html" class="btn btn--brass" id="generateBtn">生成效果图 →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>设计图纸 WATCH RENDER TOOL · 手表代工设计与报价平台</div>
+    <div>工作日 9:00–18:00 · 响应询盘 24 小时内</div>
+  </div>
+</footer>
+
+<a href="#" class="float-whatsapp" aria-label="通过 WhatsApp 联系我们">
+  <span class="float-whatsapp__dot"></span> WhatsApp 咨询
+</a>
+
+<script src="js/main.js"></script>
+<script src="js/configurator.js"></script>
+</body>
+</html>

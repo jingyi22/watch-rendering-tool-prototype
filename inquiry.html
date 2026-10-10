@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>提交询盘 — 效果图在线生成工具</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__bar">
+    <a href="index.html" class="site-header__brand">设计图纸 <small>WATCH RENDER TOOL</small></a>
+    <nav class="site-header__nav">
+      <a href="full-custom.html">全非标定制</a>
+      <a href="mold-select.html">小批量半定制</a>
+      <a href="index.html#how">工作原理</a>
+    </nav>
+    <div class="site-header__actions">
+      <a href="inquiry.html" class="btn btn--primary btn--sm">获取报价</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" style="padding: var(--space-4) 0 var(--space-3);">
+    <div class="container">
+      <div class="hero__eyebrow">第 5 步 / 5</div>
+      <h1 style="font-size: var(--fs-h1);">提交询盘</h1>
+      <p class="hero__sub" style="max-width:none;">您的设计方案与效果图已自动附带，无需重复描述。补充数量与联系方式即可提交。</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+
+      <div class="form-shell">
+        <aside class="form-shell__notes">
+          <div class="form-notes">
+            <h4>已自动附带的方案信息</h4>
+            <div class="result-meta" style="margin:0 0 var(--space-3);">
+              <span>MOLD-001 本本石</span>
+              <span>316L不锈钢</span>
+              <span>PVD镀金</span>
+              <span>太阳放射纹表盘</span>
+              <span>棕色牛皮表带</span>
+            </div>
+            <div style="border:1px solid var(--line); border-radius: var(--radius-m); overflow:hidden; margin-bottom: var(--space-3);">
+              <img src="assets/render_sample_1.png" alt="已生成的效果图" style="width:100%; display:block;">
+            </div>
+            <p>如需调整设计，请<a href="configurator.html" style="text-decoration:underline;">返回自定义设计页</a>——这里提交的询盘会使用当前这套方案。</p>
+          </div>
+        </aside>
+
+        <form class="form-card" onsubmit="return false;">
+          <h3 class="form-card__title">小批量半定制询盘单</h3>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="iq-name">姓名<span class="req">*</span></label>
+              <input type="text" id="iq-name" required>
+            </div>
+            <div class="field">
+              <label for="iq-email">公司邮箱<span class="req">*</span></label>
+              <input type="email" id="iq-email" required>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="iq-company">公司名称<span class="opt">选填</span></label>
+              <input type="text" id="iq-company">
+            </div>
+            <div class="field">
+              <label for="iq-country">国家/地区<span class="opt">选填</span></label>
+              <input type="text" id="iq-country">
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="iq-qty">预估数量<span class="req">*</span></label>
+              <input type="number" id="iq-qty" min="30" placeholder="≥ 30 件" required>
+              <p class="field__hint">小批量半定制起订量为 30 件</p>
+            </div>
+            <div class="field">
+              <label for="iq-date">目标交期<span class="opt">选填</span></label>
+              <input type="text" id="iq-date" placeholder="例如：2026年Q2">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="iq-notes">补充说明<span class="opt">选填</span></label>
+            <textarea id="iq-notes" placeholder="如包装、刻字、物流等其他需求"></textarea>
+          </div>
+
+          <div class="form-card__footer">
+            <p>提交即表示您同意我们使用这些信息与您联系</p>
+            <button type="submit" class="btn btn--primary" id="submitInquiry">提交询盘</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>设计图纸 WATCH RENDER TOOL · 手表代工设计与报价平台</div>
+    <div>工作日 9:00–18:00 · 响应询盘 24 小时内</div>
+  </div>
+</footer>
+
+<a href="#" class="float-whatsapp" aria-label="通过 WhatsApp 联系我们">
+  <span class="float-whatsapp__dot"></span> WhatsApp 咨询
+</a>
+
+<script src="js/main.js"></script>
+<script>
+document.getElementById('submitInquiry').addEventListener('click', function (e) {
+  e.preventDefault();
+  this.textContent = '已提交 ✓';
+  this.setAttribute('disabled', 'true');
+});
+</script>
+</body>
+</html>

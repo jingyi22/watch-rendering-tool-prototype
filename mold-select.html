@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>选择模具型号 — 小批量半定制</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/mold.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__bar">
+    <a href="index.html" class="site-header__brand">设计图纸 <small>WATCH RENDER TOOL</small></a>
+    <nav class="site-header__nav">
+      <a href="full-custom.html">全非标定制</a>
+      <a href="mold-select.html" class="is-active">小批量半定制</a>
+      <a href="index.html#how">工作原理</a>
+    </nav>
+    <div class="site-header__actions">
+      <a href="inquiry.html" class="btn btn--primary btn--sm">获取报价</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" style="padding-bottom: var(--space-4);">
+    <div class="container">
+      <div class="hero__eyebrow">第 1 步 / 5</div>
+      <h1 style="font-size: var(--fs-h1); max-width: 26em;">先选一款现有模具，<br>作为设计的起点</h1>
+      <p class="hero__sub">以下为现有模具库，表壳直径、厚度、表耳间距等尺寸均已固定；您可以自定义材质、表面处理、表盘与表带。</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+
+      <div class="filter-bar">
+        <button class="filter-chip is-active">全部型号</button>
+        <button class="filter-chip">圆形直身</button>
+        <button class="filter-chip">运动潜水</button>
+        <button class="filter-chip">极简复古</button>
+      </div>
+
+      <div class="mold-grid">
+
+        <article class="mold-card">
+          <div class="mold-card__thumb">
+            <img src="assets/blueprint_1.svg" alt="模具一规格图">
+          </div>
+          <div class="mold-card__body">
+            <div class="mold-card__id">MOLD-001 · 本本石</div>
+            <h3>圆形直身极简款</h3>
+            <div class="mold-card__specs">
+              <span>Ø 40.0mm</span>
+              <span>厚 10.8mm</span>
+              <span>表耳 20.0mm</span>
+            </div>
+            <p class="mold-card__desc">四段渐变收窄表圈切面，表背同心圆车花，适合极简/复古风格设计。</p>
+            <a href="configurator.html?mold=1" class="btn btn--primary btn--block">选择此型号 →</a>
+          </div>
+        </article>
+
+        <article class="mold-card">
+          <div class="mold-card__thumb">
+            <img src="assets/blueprint_2.svg" alt="模具二规格图">
+          </div>
+          <div class="mold-card__body">
+            <div class="mold-card__id">MOLD-002 · Ramesses</div>
+            <h3>运动潜水造型</h3>
+            <div class="mold-card__specs">
+              <span>Ø 42.0mm</span>
+              <span>厚 12.5mm</span>
+              <span>表耳 22.0mm</span>
+            </div>
+            <p class="mold-card__desc">加厚表圈与旋转刻度圈结构，适合运动/潜水风格设计方向。</p>
+            <a href="configurator.html?mold=2" class="btn btn--primary btn--block">选择此型号 →</a>
+          </div>
+        </article>
+
+        <article class="mold-card">
+          <div class="mold-card__thumb">
+            <img src="assets/blueprint_3.svg" alt="模具三规格图">
+          </div>
+          <div class="mold-card__body">
+            <div class="mold-card__id">MOLD-003 · Sungift</div>
+            <h3>轻奢商务造型</h3>
+            <div class="mold-card__specs">
+              <span>Ø 38.5mm</span>
+              <span>厚 9.2mm</span>
+              <span>表耳 19.0mm</span>
+            </div>
+            <p class="mold-card__desc">细腰线表壳，表圈可选镶嵌装饰位，适合轻奢/商务风格设计方向。</p>
+            <a href="configurator.html?mold=3" class="btn btn--primary btn--block">选择此型号 →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="guidance" style="margin-top: var(--space-4);">
+        <div class="guidance__icon">i</div>
+        <div>
+          <h4>没有找到合适的造型？</h4>
+          <p>如果现有模具都无法满足您的造型需求，可以考虑<a href="full-custom.html" style="text-decoration:underline;">全非标定制</a>路径，从零开发专属模具（起订量 300 件）。</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>设计图纸 WATCH RENDER TOOL · 手表代工设计与报价平台</div>
+    <div>工作日 9:00–18:00 · 响应询盘 24 小时内</div>
+  </div>
+</footer>
+
+<a href="#" class="float-whatsapp" aria-label="通过 WhatsApp 联系我们">
+  <span class="float-whatsapp__dot"></span> WhatsApp 咨询
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

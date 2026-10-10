@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="800" viewBox="0 0 1100 800" font-family="Microsoft YaHei, sans-serif">
+  <rect width="1100" height="800" fill="#ffffff"/>
+  <text x="550" y="28" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">方案三「太阳礌赠」轻奢现代款 — 表壳规格图（单位：mm）</text>
+
+  <text x="230" y="46" text-anchor="middle" font-size="14" fill="#444">正视图（含表带示意）</text>
+  <text x="740" y="46" text-anchor="middle" font-size="14" fill="#444">侧视图（表壳剖面）</text>
+
+  <!-- FRONT VIEW -->
+  <g transform="translate(0,95)">
+    <line x1="60" y1="20" x2="60" y2="390" stroke="#999" stroke-width="1"/>
+    <line x1="60" y1="20" x2="90" y2="20" stroke="#999"/>
+    <line x1="60" y1="390" x2="90" y2="390" stroke="#999"/>
+    <text x="40" y="205" text-anchor="middle" font-size="13" fill="#333" transform="rotate(-90 40,205)">表耳间距 44.0</text>
+
+    <!-- strap stubs, sleek black rubber, no stitching (modern minimal) -->
+    <path d="M168,20 L292,20 L288,-22 Q287,-28 279,-28 L181,-28 Q173,-28 172,-22 Z" fill="#1a1a1a" stroke="#000" stroke-width="1.5"/>
+    <path d="M168,390 L292,390 L288,432 Q287,438 279,438 L181,438 Q173,438 172,432 Z" fill="#1a1a1a" stroke="#000" stroke-width="1.5"/>
+    <line x1="230" y1="-24" x2="230" y2="18" stroke="#333" stroke-width="0.6" opacity="0.5"/>
+    <circle cx="230" cy="-14" r="12" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="230" y="-10" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="bold">⑥</text>
+
+    <path d="M175,65 L160,25 Q158,19 165,19 L195,19 Q202,19 200,25 L205,63 Z" fill="#dfe3e6" stroke="#333" stroke-width="1.5"/>
+    <path d="M285,65 L300,25 Q302,19 295,19 L265,19 Q258,19 260,25 L255,63 Z" fill="#dfe3e6" stroke="#333" stroke-width="1.5"/>
+    <path d="M175,355 L160,395 Q158,401 165,401 L195,401 Q202,401 200,395 L205,357 Z" fill="#dfe3e6" stroke="#333" stroke-width="1.5"/>
+    <path d="M285,355 L300,395 Q302,401 295,401 L265,401 Q258,401 260,395 L255,357 Z" fill="#dfe3e6" stroke="#333" stroke-width="1.5"/>
+
+    <circle cx="230" cy="210" r="140" fill="#eef0f2" stroke="#222" stroke-width="2.5"/>
+    <path d="M120,150 A140,140 0 0 1 210,78" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.6"/>
+
+    <polygon points="230,83 221,99 239,99" fill="#8a8f94" stroke="#333" stroke-width="1.5"/>
+    <circle cx="230" cy="91" r="13" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="230" y="95" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="bold">①</text>
+
+    <circle cx="230" cy="210" r="112" fill="#12213b" stroke="#333" stroke-width="2"/>
+    <g stroke="#c9d4e8" stroke-width="1" opacity="0.85">
+      <line x1="230" y1="210" x2="230" y2="98"/>
+      <line x1="230" y1="210" x2="291" y2="115"/>
+      <line x1="230" y1="210" x2="335" y2="157"/>
+      <line x1="230" y1="210" x2="335" y2="263"/>
+      <line x1="230" y1="210" x2="291" y2="305"/>
+      <line x1="230" y1="210" x2="230" y2="322"/>
+      <line x1="230" y1="210" x2="169" y2="305"/>
+      <line x1="230" y1="210" x2="125" y2="263"/>
+      <line x1="230" y1="210" x2="125" y2="157"/>
+      <line x1="230" y1="210" x2="169" y2="115"/>
+    </g>
+    <circle cx="230" cy="210" r="112" fill="none" stroke="#12213b" stroke-width="1"/>
+    <line x1="230" y1="210" x2="230" y2="140" stroke="#e8edf5" stroke-width="3"/>
+    <line x1="230" y1="210" x2="270" y2="210" stroke="#e8edf5" stroke-width="3"/>
+    <circle cx="230" cy="210" r="4" fill="#e8edf5"/>
+    <circle cx="230" cy="160" r="12" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="230" y="164" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="bold">②</text>
+
+    <rect x="368" y="198" width="22" height="22" rx="3" fill="#dfe3e6" stroke="#333" stroke-width="1.5"/>
+    <circle cx="379" cy="209" r="13" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="379" y="213" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="bold">③</text>
+
+    <circle cx="150" cy="160" r="12" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="150" y="164" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="bold">④</text>
+
+    <line x1="90" y1="455" x2="370" y2="455" stroke="#c0392b" stroke-width="1"/>
+    <line x1="90" y1="445" x2="90" y2="465" stroke="#c0392b"/>
+    <line x1="370" y1="445" x2="370" y2="465" stroke="#c0392b"/>
+    <text x="230" y="477" text-anchor="middle" font-size="13" fill="#c0392b">表壳直径 38.5</text>
+
+    <text x="230" y="515" text-anchor="middle" font-size="13" fill="#2b6cc4">表耳(表带)宽度 19.0　　表带宽度 17.0</text>
+  </g>
+
+  <!-- SIDE VIEW -->
+  <g transform="translate(0,95)">
+    <path d="M615,110 L600,98 L615,90 L635,90 L635,320 L615,320 L600,312 L615,300 Z" fill="#dfe3e6" stroke="#333" stroke-width="1.5"/>
+
+    <path d="M635,85 L680,98 Q690,102 690,112 L690,298 Q690,308 680,312 L635,325 L635,85 Z" fill="#eef0f2" stroke="#222" stroke-width="2.5"/>
+    <path d="M635,90 Q660,80 680,98 L680,112 L635,112 Z" fill="#dbe9f7" stroke="#333" stroke-width="1.5"/>
+    <path d="M660,103 A25,25 0 0 1 680,112" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.7"/>
+
+    <rect x="690" y="185" width="24" height="18" rx="3" fill="#dfe3e6" stroke="#333" stroke-width="1.5"/>
+
+    <circle cx="662" cy="205" r="12" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="662" y="209" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="bold">⑤</text>
+
+    <!-- strap stubs -->
+    <path d="M615,98 L602,68 L620,68 L635,85 L635,98 Z" fill="#1a1a1a" stroke="#000" stroke-width="1.2"/>
+    <path d="M615,312 L602,342 L620,342 L635,325 L635,312 Z" fill="#1a1a1a" stroke="#000" stroke-width="1.2"/>
+
+    <line x1="750" y1="85" x2="770" y2="85" stroke="#333"/>
+    <line x1="750" y1="325" x2="770" y2="325" stroke="#333"/>
+    <line x1="760" y1="85" x2="760" y2="325" stroke="#333" stroke-width="1"/>
+    <text x="800" y="205" text-anchor="middle" font-size="13" fill="#333" transform="rotate(-90 800,205)">表壳厚度 9.2</text>
+  </g>
+
+  <!-- LEGEND -->
+  <g font-size="12.5" fill="#333">
+    <rect x="60" y="700" width="980" height="1" fill="#ddd"/>
+    <text x="60" y="723"><tspan font-weight="bold" fill="#c0392b">①</tspan> 12点单一四棱尖顶浮雕标记（替代传统时标，全表壳唯一装饰符号）</text>
+    <text x="60" y="745"><tspan font-weight="bold" fill="#c0392b">②</tspan> 表盘太阳放射纹(sunburst dial)　　<tspan font-weight="bold" fill="#c0392b">③</tspan> 表冠 Ø5.5mm</text>
+  </g>
+  <g font-size="12.5" fill="#333" transform="translate(560,0)">
+    <text x="60" y="723"><tspan font-weight="bold" fill="#c0392b">④⑤</tspan> 表壳侧面/表圈素面精抛光，不做雕刻纹理</text>
+    <text x="60" y="745"><tspan font-weight="bold" fill="#c0392b">⑥</tspan> 黑色橡胶表带，简约无压线，宽度17.0mm</text>
+  </g>
+</svg>

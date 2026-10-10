@@ -1,0 +1,55 @@
+/* ===== Design Tokens — Watch Rendering Tool ===== */
+/* Grounded in the subject's own artifacts: CAD blueprint drafting paper,
+   dimension-line red callouts, brushed-steel case metal, PVD gold accents. */
+
+:root {
+  /* Color */
+  --paper:        #F6F7F5;   /* cool drafting paper, not warm cream */
+  --paper-dim:     #ECEEEA;
+  --ink:          #15181C;   /* line-work black */
+  --ink-soft:     #4B5258;
+  --line:         #D4D7D2;   /* hairline grey on paper */
+  --callout-red:  #C0392B;   /* lifted directly from blueprint dimension callouts */
+  --steel:        #4A5A68;   /* brushed-steel structural blue-grey */
+  --steel-dark:   #2E3A44;
+  --brass:        #B8860B;   /* PVD gold accent, used sparingly for premium CTAs */
+  --navy:         #1B2430;   /* showcase panel ground for photoreal renders */
+  --navy-soft:    #26303C;
+  --paper-on-navy: #E8EAE6;
+
+  /* Type */
+  --font-display: 'Space Grotesk', 'Noto Sans SC', sans-serif;
+  --font-body:    'Inter', 'Noto Sans SC', sans-serif;
+  --font-mono:    'JetBrains Mono', 'IBM Plex Mono', monospace;
+
+  /* Scale */
+  --fs-hero:   clamp(2.6rem, 5vw, 4.6rem);
+  --fs-h1:     clamp(2rem, 3.2vw, 2.8rem);
+  --fs-h2:     clamp(1.5rem, 2.2vw, 1.9rem);
+  --fs-h3:     1.25rem;
+  --fs-body:   1rem;
+  --fs-small:  0.875rem;
+  --fs-mono:   0.8125rem;
+
+  /* Spacing */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6.5rem;
+
+  /* Shape */
+  --radius-s: 2px;
+  --radius-m: 4px;
+  --container: 1180px;
+
+  /* Motion */
+  --ease: cubic-bezier(.4,0,.2,1);
+  --dur-fast: 150ms;
+  --dur-med: 320ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; --dur-med: 0ms; }
+}

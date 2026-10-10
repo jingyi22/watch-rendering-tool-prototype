@@ -1,0 +1,88 @@
+/* ===== AI Guide page ===== */
+
+.steps-vert {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.step-card {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: var(--space-2);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--line);
+}
+.step-card:last-child { border-bottom: none; }
+.step-card__n {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  color: var(--line);
+  font-weight: 600;
+}
+.step-card h4 { font-size: 1rem; margin-bottom: 0.4em; }
+.step-card p { color: var(--ink-soft); font-size: 0.9rem; }
+.step-card code {
+  display: block;
+  margin-top: 0.6em;
+  padding: 0.7em 0.9em;
+  background: var(--ink);
+  color: #cfe8d0;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  border-radius: var(--radius-s);
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.boundary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+}
+.boundary-table th, .boundary-table td {
+  text-align: left;
+  padding: 0.8em 1em;
+  border-bottom: 1px solid var(--line);
+}
+.boundary-table th {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  background: var(--paper-dim);
+}
+.boundary-table tr:last-child td { border-bottom: none; }
+.boundary-table .tag-fixed {
+  color: var(--callout-red);
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+.boundary-table .tag-free {
+  color: var(--steel);
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+.tool-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+.tool-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: var(--space-3);
+  background: #fff;
+}
+.tool-card h4 { font-size: 1rem; margin-bottom: 0.3em; }
+.tool-card p { font-size: 0.85rem; color: var(--ink-soft); }
+
+@media (max-width: 760px) {
+  .tool-cards { grid-template-columns: 1fr; }
+  .step-card { grid-template-columns: 40px 1fr; }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>生成结果 — 小批量半定制</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/result.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__bar">
+    <a href="index.html" class="site-header__brand">设计图纸 <small>WATCH RENDER TOOL</small></a>
+    <nav class="site-header__nav">
+      <a href="full-custom.html">全非标定制</a>
+      <a href="mold-select.html" class="is-active">小批量半定制</a>
+      <a href="index.html#how">工作原理</a>
+    </nav>
+    <div class="site-header__actions">
+      <a href="inquiry.html" class="btn btn--primary btn--sm">获取报价</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" style="padding: var(--space-4) 0 var(--space-3);">
+    <div class="container">
+      <div class="hero__eyebrow">第 4 步 / 5</div>
+      <h1 style="font-size: var(--fs-h1);">效果图已生成</h1>
+      <p class="hero__sub" style="max-width:none;">基于 MOLD-001 本本石 + 您选择的材质组合，以下为生成结果。可下载保存，或直接带入询盘单。</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+
+      <div class="result-meta">
+        <span>MOLD-001 本本石</span>
+        <span>316L不锈钢</span>
+        <span>PVD镀金</span>
+        <span>太阳放射纹表盘</span>
+        <span>棕色牛皮表带</span>
+        <span>石英机芯</span>
+      </div>
+
+      <div class="result-grid">
+        <div class="result-card">
+          <div class="result-card__stage">
+            <img src="assets/render_sample_1.png" alt="实物渲染图结果">
+          </div>
+          <div class="result-card__bar">
+            <h4>实物渲染图</h4>
+            <div class="result-card__actions">
+              <button class="icon-btn" title="重新生成" id="regenRender">⟲</button>
+              <a class="icon-btn" title="下载" href="assets/render_sample_1.png" download>↓</a>
+            </div>
+          </div>
+        </div>
+        <div class="result-card result-card--light">
+          <div class="result-card__stage">
+            <img src="assets/blueprint_1.svg" alt="原型规格图结果">
+          </div>
+          <div class="result-card__bar">
+            <h4>原型规格图</h4>
+            <div class="result-card__actions">
+              <button class="icon-btn" title="重新生成" id="regenBlueprint">⟲</button>
+              <a class="icon-btn" title="下载" href="assets/blueprint_1.svg" download>↓</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-actions-bar">
+        <div class="result-actions-bar__left">
+          <a href="configurator.html" class="btn btn--outline btn--sm">返回修改设计</a>
+          <button class="btn btn--outline btn--sm" id="saveBtn">保存到我的方案</button>
+        </div>
+        <div style="display:flex; align-items:center; gap: var(--space-2);">
+          <span class="limit-note" id="limitNote">今日剩余生成次数：7 / 10</span>
+          <a href="inquiry.html" class="btn btn--brass">带着这个方案去询盘 →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>设计图纸 WATCH RENDER TOOL · 手表代工设计与报价平台</div>
+    <div>工作日 9:00–18:00 · 响应询盘 24 小时内</div>
+  </div>
+</footer>
+
+<a href="#" class="float-whatsapp" aria-label="通过 WhatsApp 联系我们">
+  <span class="float-whatsapp__dot"></span> WhatsApp 咨询
+</a>
+
+<script src="js/main.js"></script>
+<script src="js/result.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 自助设计指南 — 小批量半定制</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/ai-guide.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__bar">
+    <a href="index.html" class="site-header__brand">设计图纸 <small>WATCH RENDER TOOL</small></a>
+    <nav class="site-header__nav">
+      <a href="full-custom.html">全非标定制</a>
+      <a href="mold-select.html" class="is-active">小批量半定制</a>
+      <a href="index.html#how">工作原理</a>
+    </nav>
+    <div class="site-header__actions">
+      <a href="inquiry.html" class="btn btn--primary btn--sm">获取报价</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" style="padding: var(--space-4) 0 var(--space-3);">
+    <div class="container">
+      <div class="hero__eyebrow">第 3 步 / 5（可选）</div>
+      <h1 style="font-size: var(--fs-h1); max-width: 28em;">用 ChatGPT / Gemini<br>在模具范围内头脑风暴</h1>
+      <p class="hero__sub" style="max-width: none;">还没有明确的设计方向？可以先用通用 AI 工具，结合模具规格图，自己探索设计方向。生成结果仅供灵感参考，最终仍需在<a href="configurator.html" style="text-decoration:underline;">自定义设计页</a>选择真实可生产的选项。</p>
+    </div>
+  </section>
+
+  <!-- ============ BOUNDARY TABLE ============ -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section__head">
+        <div class="section__eyebrow">先搞清楚边界</div>
+        <h2>哪些可以自由设计，哪些由模具决定</h2>
+      </div>
+      <table class="boundary-table">
+        <thead>
+          <tr><th>维度</th><th>状态</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>表壳直径 / 厚度 / 表耳间距</td><td><span class="tag-fixed">模具固定</span></td><td>由所选模具型号决定，不可通过 AI 想象改变</td></tr>
+          <tr><td>表壳整体造型（圆形/桶形等）</td><td><span class="tag-fixed">模具固定</span></td><td>造型轮廓已由模具决定，AI 生成图不能脱离此轮廓</td></tr>
+          <tr><td>表壳材质与表面处理</td><td><span class="tag-free">可自由设计</span></td><td>不锈钢/钛合金/陶瓷等，拉丝/抛光/PVD镀色等</td></tr>
+          <tr><td>表盘图案与颜色</td><td><span class="tag-free">可自由设计</span></td><td>太阳放射纹、格纹、珠光贝母、渐变色等</td></tr>
+          <tr><td>表带材质与工艺</td><td><span class="tag-free">可自由设计</span></td><td>牛皮、橡胶、链带、NATO 尼龙等</td></tr>
+          <tr><td>局部装饰元素（表圈雕刻、图腾）</td><td><span class="tag-free">可自由设计</span></td><td>只要不改变模具结构尺寸，细节装饰可自由构思</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ RECOMMENDED TOOLS ============ -->
+  <section class="section section--dim section--tight">
+    <div class="container">
+      <div class="section__head">
+        <div class="section__eyebrow">推荐工具</div>
+        <h2>两款常见的通用 AI 绘图工具</h2>
+      </div>
+      <div class="tool-cards">
+        <div class="tool-card">
+          <h4>ChatGPT（图像生成）</h4>
+          <p>直接在对话框中粘贴 Prompt，可连续追问调整细节（如"把表盘换成深蓝色"），适合反复微调。</p>
+        </div>
+        <div class="tool-card">
+          <h4>Gemini</h4>
+          <p>生成速度快，适合一次性尝试多种材质组合，快速对比效果。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STEP BY STEP ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <div class="section__eyebrow">使用步骤</div>
+        <h2>四步，从模具规格图到灵感草图</h2>
+      </div>
+      <div class="steps-vert">
+        <div class="step-card">
+          <div class="step-card__n">01</div>
+          <div>
+            <h4>找到您的模具规格图</h4>
+            <p>回到<a href="mold-select.html">模具选择页</a>，记下所选型号的表壳直径、厚度、表耳间距等关键尺寸。</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-card__n">02</div>
+          <div>
+            <h4>套用 Prompt 模板，填入尺寸与设计需求</h4>
+            <p>将数值与您想要的材质、颜色、风格填入下方模板：</p>
+            <code>一张专业奢侈品级手表产品摄影图，正面45度角视角，纯色简约背景，柔和影棚灯光，无手腕/手部出现。
+
+表壳：40.00mm 拉丝不锈钢，圆形直身表壳
+表圈：黑色陶瓷单向旋转刻度圈，素面抛光
+表盘：深蓝色太阳放射纹表盘，白色棒形夜光指针
+表带：不锈钢三节链带，蝴蝶扣
+
+灯光与质感：影棚柔光箱布光，金属高光反射自然，材质细节清晰可见，摄影级真实质感，8K超高清商业产品摄影，焦点清晰。</code>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-card__n">03</div>
+          <div>
+            <h4>附加统一负面提示词，减少常见生成错误</h4>
+            <p>建议粘贴在正向 Prompt 后，避免比例失真、多余指针、文字乱码等问题：</p>
+            <code>负面提示词（避免出现）：比例失真、表壳变形、多余或缺失指针、表盘文字模糊或乱码、多余水印、多余logo、手腕或手部出现、背景杂乱、双重曝光、过度曝光死白、噪点颗粒过重、卡通风格、低分辨率、模糊失焦。</code>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-card__n">04</div>
+          <div>
+            <h4>把灵感带回自定义设计页</h4>
+            <p>看中某个材质或配色方向后，回到<a href="configurator.html">自定义设计页</a>，在结构化选项中选择最接近的组合——这一步生成的才是可生产、可报价的正式效果图。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DISCLAIMER ============ -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="guidance">
+        <div class="guidance__icon">!</div>
+        <div>
+          <h4>重要说明</h4>
+          <p>ChatGPT / Gemini 生成的图片仅用于灵感探索，不代表最终可生产效果，也不会被保存为正式设计方案。请在<a href="configurator.html" style="text-decoration:underline;">自定义设计页</a>完成结构化选择后生成的效果图，才可用于询盘与报价。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" style="padding-top:0;">
+    <div class="container" style="text-align:center;">
+      <a href="configurator.html" class="btn btn--primary">返回自定义设计页 →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>设计图纸 WATCH RENDER TOOL · 手表代工设计与报价平台</div>
+    <div>工作日 9:00–18:00 · 响应询盘 24 小时内</div>
+  </div>
+</footer>
+
+<a href="#" class="float-whatsapp" aria-label="通过 WhatsApp 联系我们">
+  <span class="float-whatsapp__dot"></span> WhatsApp 咨询
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
