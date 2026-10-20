@@ -1,0 +1,68 @@
+assets/exploded_view_1.svg
+  s_8474454288cfa5::t_d95a547a4421a0 1-119
+assets/nda-template.html
+  s_8474454288cfa5::t_8e832102450343 1-92
+handbook.html
+  s_8474454288cfa5::t_5337cf191b0d02 1-24,26-171
+  s_8474454288cfa5::t_72fbccce67daaa 25
+ai-guide.html
+  s_8474454288cfa5::t_d42996eb77e8cd 24
+  s_8474454288cfa5::t_0a2da68862a7ec 114,144-146
+  s_8474454288cfa5::t_8ab8408a835296 22-23
+  s_8474454288cfa5::t_20bcfe219171fc 61-65
+  s_8474454288cfa5::t_5aa70f3f5d3eb4 183,185
+about.html
+  s_8474454288cfa5::t_b4c2d0252f585b 23
+  s_8474454288cfa5::t_0ce32510519d80 1-22,24-101
+mold-select.html
+  s_8474454288cfa5::t_44fbea2b2f7597 39
+  s_8474454288cfa5::t_09537cc6b52c8f 22-23
+  s_8474454288cfa5::t_444ad9df9a16df 111-117
+  s_8474454288cfa5::t_3d1ce3afbc8325 24
+configurator.html
+  s_8474454288cfa5::t_deaa1d1a95dad5 22-23
+  s_8474454288cfa5::t_b800fc7a60f9be 24
+  s_8474454288cfa5::t_809f961080a46c 98-106,115,118-133,143-203,219-226
+  s_8474454288cfa5::t_658a906c9fa2ac 245,247,249-251
+sample-purchase.html
+  s_8474454288cfa5::t_bc89b50f5bd814 23
+  s_8474454288cfa5::t_5605c9d2472635 1-22,24-99
+inquiry.html
+  s_8474454288cfa5::t_9da0d5f427ff11 24
+  s_8474454288cfa5::t_45ec83951ab303 92-93
+  s_8474454288cfa5::t_87aa6ccc737203 22-23
+css/configurator.css
+  s_8474454288cfa5::t_fa89d5d96270b3 116-131
+full-custom.html
+  s_8474454288cfa5::t_2377cb106bac43 103
+  s_8474454288cfa5::t_b18b0ca722dfc8 24
+  s_8474454288cfa5::t_290a20b36273dc 22-23
+result.html
+  s_8474454288cfa5::t_dddc5eb08cd1dc 22-23
+  s_8474454288cfa5::t_eadaf0ab56bc90 24
+js/configurator.js
+  s_8474454288cfa5::t_e501f4cd39ffc9 11,13-17,29-41
+index.html
+  s_8474454288cfa5::t_a5fe4c3700f76f 21-22,34,61-81,83,90-145,151,203,234
+  s_8474454288cfa5::t_aa662e4929cd92 89
+  s_8474454288cfa5::t_622bd92e94330a 23
+  s_8474454288cfa5::t_177974bf933b00 186
+css/home.css
+  s_8474454288cfa5::t_adb1f349b89b77 286-315,320-321
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.50-trip",
+  "base_commit_sha": "266415ad6faacd6615eadb416883e63b9749e406",
+  "prompts": {},
+  "sessions": {
+    "s_8474454288cfa5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fc4fb4a3-90db-4657-998d-89eedb77e2f3",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Elena Lu （陆靖沂） <elenalu@trip.com>"
+    }
+  }
+}
