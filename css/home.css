@@ -283,10 +283,42 @@
   font-size: 0.8rem;
 }
 
+/* ===== Core anatomy (exploded view) ===== */
+.anatomy-shell {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: #fff;
+  padding: var(--space-3);
+  display: flex;
+  justify-content: center;
+}
+.anatomy-shell img { max-height: 760px; width: auto; }
+
+/* ===== 3-step flow variant ===== */
+.flow--3 { grid-template-columns: repeat(3, 1fr); }
+
+/* ===== Material showcase ===== */
+.material-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+.material-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: #fff;
+  overflow: hidden;
+}
+.material-card__swatch { aspect-ratio: 16/9; }
+.material-card h4 { font-size: 1rem; margin: var(--space-2) var(--space-3) 0.3em; }
+.material-card p { font-size: 0.85rem; color: var(--ink-soft); margin: 0 var(--space-3) var(--space-3); }
+
 @media (max-width: 980px) {
   .hero__grid { grid-template-columns: 1fr; }
   .tiers { grid-template-columns: 1fr; }
   .flow { grid-template-columns: 1fr 1fr; }
+  .flow--3 { grid-template-columns: 1fr; }
+  .material-grid { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 560px) {

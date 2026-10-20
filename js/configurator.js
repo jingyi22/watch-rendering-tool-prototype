@@ -6,11 +6,15 @@
 
   const summaryMap = {
     material: 'sum-material',
-    finish: 'sum-finish',
     dial: 'sum-dial',
     hands: 'sum-hands',
+    handcount: 'sum-handcount',
     strap: 'sum-strap',
-    movement: 'sum-movement'
+    strapcolor: 'sum-strapcolor',
+    movement: 'sum-movement',
+    bezel: 'sum-bezel',
+    crown: 'sum-crown',
+    caseback: 'sum-caseback'
   };
 
   function selectSwatch(group, swatch) {
@@ -21,6 +25,20 @@
     if (summaryId) {
       const el = document.getElementById(summaryId);
       if (el) el.textContent = swatch.dataset.value;
+    }
+
+    if (groupName === 'movement') {
+      const isMechanical = swatch.dataset.mechanical === 'true';
+      const originBox = document.querySelector('[data-subgroup="movement-origin"]');
+      const cradleBox = document.querySelector('[data-subgroup="movement-cradle"]');
+      if (originBox) originBox.hidden = !isMechanical;
+      if (cradleBox) cradleBox.hidden = !isMechanical;
+    }
+
+    if (groupName === 'strap') {
+      const isSteel = swatch.dataset.steel === 'true';
+      const claspBox = document.querySelector('[data-subgroup="strap-clasp"]');
+      if (claspBox) claspBox.hidden = !isSteel;
     }
   }
 

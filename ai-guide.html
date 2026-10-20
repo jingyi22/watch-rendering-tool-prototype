@@ -19,6 +19,9 @@
     <nav class="site-header__nav">
       <a href="full-custom.html">全非标定制</a>
       <a href="mold-select.html" class="is-active">小批量半定制</a>
+      <a href="about.html">公司介绍</a>
+      <a href="sample-purchase.html">样品购买</a>
+      <a href="handbook.html">设计师手册</a>
       <a href="index.html#how">工作原理</a>
     </nav>
     <div class="site-header__actions">
@@ -55,6 +58,11 @@
           <tr><td>表盘图案与颜色</td><td><span class="tag-free">可自由设计</span></td><td>太阳放射纹、格纹、珠光贝母、渐变色等</td></tr>
           <tr><td>表带材质与工艺</td><td><span class="tag-free">可自由设计</span></td><td>牛皮、橡胶、链带、NATO 尼龙等</td></tr>
           <tr><td>局部装饰元素（表圈雕刻、图腾）</td><td><span class="tag-free">可自由设计</span></td><td>只要不改变模具结构尺寸，细节装饰可自由构思</td></tr>
+          <tr><td>圈口花纹</td><td><span class="tag-free">可自由设计</span></td><td>拉丝直身圈、批花圈、刻度圈等</td></tr>
+          <tr><td>表冠刻字</td><td><span class="tag-free">可自由设计</span></td><td>品牌刻字内容与颜色可自定义，默认无特殊处理</td></tr>
+          <tr><td>底盖类型</td><td><span class="tag-free">可自由设计</span></td><td>密封底盖 / 透视底盖，可附加底盖定制内容</td></tr>
+          <tr><td>电镀颜色</td><td><span class="tag-free">可自由设计</span></td><td>金/黑/玫灰金等 PVD 电镀色随材质与表面处理组合</td></tr>
+          <tr><td>机芯托（仅自动机械）</td><td><span class="tag-free">可自由设计</span></td><td>可选定制机芯托，仅在选择自动机械机芯时开放</td></tr>
         </tbody>
       </table>
     </div>
@@ -103,6 +111,7 @@
             <div class="tpl-tabs">
               <button class="tpl-tab is-active" data-tpl="proto" type="button">原型规格图 Prompt</button>
               <button class="tpl-tab" data-tpl="render" type="button">实物渲染图 Prompt</button>
+              <button class="tpl-tab" data-tpl="adjust" type="button">追加调整 Prompt 示例</button>
             </div>
             <div class="tpl-panel is-active" data-tpl="proto">
               <code>一张工业设计风格的手表表壳工程规格图，黑白线稿，白色背景，包含正视图与侧视图剖面。
@@ -131,6 +140,10 @@
 表带：不锈钢三节链带，蝴蝶扣
 
 灯光与质感：影棚柔光箱布光，金属高光反射自然，材质细节清晰可见，摄影级真实质感，8K超高清商业产品摄影，焦点清晰。</code>
+            </div>
+            <div class="tpl-panel" data-tpl="adjust">
+              <code>把手表的字面改成蓝色，圈口改成批花圈。</code>
+              <p class="tpl-hint">提示：在已生成的图基础上追问时，只需用一句口语化的修改指令即可，不必重新粘贴完整 Prompt；"字面"即表盘，"批花圈"是圈口花纹的一种可选款式。</p>
             </div>
           </div>
         </div>
@@ -167,8 +180,9 @@
         <tbody>
           <tr><td>表壳材质</td><td>316L不锈钢、904L不锈钢、钛合金、黄铜、陶瓷、青铜（做旧）、18K金</td></tr>
           <tr><td>表面处理</td><td>拉丝、抛光、喷砂、PVD镀金 / 镀黑 / 镀玫灰金</td></tr>
-          <tr><td>表盘图案</td><td>太阳放射纹、格纹（guilloché）、珠光贝母、渐变色、哑光素面、镂空骷髅</td></tr>
+          <tr><td>表盘图案</td><td>太阳放射纹、格纹（guilloché）、珠光贝母、渐变色、哑光素面、镂空骷髅、MOPA激光微雕（巴黎饰钉纹/大麦纹）、天然螺钿变彩、手工大漆戗金</td></tr>
           <tr><td>表带材质</td><td>牛皮（压线/素面）、鳄鱼纹皮、橡胶、尼龙表带（NATO）、不锈钢链带、陶瓷链带</td></tr>
+          <tr><td>机芯型号</td><td>日本 Miyota 9015 机芯、瑞士 Sellita 机芯 — 可用于指定机芯外观与结构细节</td></tr>
           <tr><td>风格定位</td><td>复古怀旧、极简现代、运动潜水、赛车计时、轻奢商务</td></tr>
         </tbody>
       </table>

@@ -19,6 +19,9 @@
     <nav class="site-header__nav">
       <a href="full-custom.html">全非标定制</a>
       <a href="mold-select.html" class="is-active">小批量半定制</a>
+      <a href="about.html">公司介绍</a>
+      <a href="sample-purchase.html">样品购买</a>
+      <a href="handbook.html">设计师手册</a>
       <a href="index.html#how">工作原理</a>
     </nav>
     <div class="site-header__actions">
@@ -68,19 +71,6 @@
 
           <div class="option-group">
             <div class="option-group__head">
-              <h3>表面处理</h3>
-              <span>FINISH</span>
-            </div>
-            <div class="swatch-grid" data-group="finish">
-              <button class="swatch is-selected" data-value="拉丝"><span class="swatch__chip" style="background:linear-gradient(135deg,#d8d8d8,#aaa);"></span><span>拉丝</span></button>
-              <button class="swatch" data-value="抛光"><span class="swatch__chip" style="background:linear-gradient(135deg,#fff,#9ab);"></span><span>抛光</span></button>
-              <button class="swatch" data-value="PVD镀金"><span class="swatch__chip" style="background:linear-gradient(135deg,#e9c46a,#b8860b);"></span><span>PVD镀金</span></button>
-              <button class="swatch" data-value="PVD镀黑"><span class="swatch__chip" style="background:#1a1a1a;"></span><span>PVD镀黑</span></button>
-            </div>
-          </div>
-
-          <div class="option-group">
-            <div class="option-group__head">
               <h3>表盘图案</h3>
               <span>DIAL PATTERN</span>
             </div>
@@ -105,14 +95,41 @@
 
           <div class="option-group">
             <div class="option-group__head">
+              <h3>针数</h3>
+              <span>HAND COUNT</span>
+            </div>
+            <div class="swatch-grid" data-group="handcount">
+              <button class="swatch is-selected" data-value="三针设计"><span class="swatch__chip" style="background:#eee;"></span><span>三针设计</span></button>
+              <button class="swatch" data-value="六针设计"><span class="swatch__chip" style="background:#eee;"></span><span>六针设计</span></button>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <div class="option-group__head">
               <h3>表带材质</h3>
               <span>STRAP</span>
             </div>
             <div class="swatch-grid" data-group="strap">
               <button class="swatch is-selected" data-value="棕色牛皮"><span class="swatch__chip" style="background:#4a3527;"></span><span>棕色牛皮</span></button>
               <button class="swatch" data-value="黑色橡胶"><span class="swatch__chip" style="background:#1c1c1c;"></span><span>黑色橡胶</span></button>
-              <button class="swatch" data-value="不锈钢链带"><span class="swatch__chip" style="background:#c7cbcd;"></span><span>不锈钢链带</span></button>
+              <button class="swatch" data-value="不锈钢链带" data-steel="true"><span class="swatch__chip" style="background:#c7cbcd;"></span><span>不锈钢链带</span></button>
               <button class="swatch" data-value="NATO尼龙"><span class="swatch__chip" style="background:#3a4a3a;"></span><span>NATO尼龙</span></button>
+            </div>
+            <div class="sub-option">
+              <div class="sub-option__label">表带颜色</div>
+              <div class="swatch-grid" data-group="strapcolor">
+                <button class="swatch is-selected" data-value="棕色"><span class="swatch__chip" style="background:#4a3527;"></span><span>棕色</span></button>
+                <button class="swatch" data-value="黑色"><span class="swatch__chip" style="background:#1c1c1c;"></span><span>黑色</span></button>
+                <button class="swatch" data-value="深蓝色"><span class="swatch__chip" style="background:#1B2430;"></span><span>深蓝色</span></button>
+                <button class="swatch" data-value="灰色"><span class="swatch__chip" style="background:#8a8d90;"></span><span>灰色</span></button>
+              </div>
+            </div>
+            <div class="sub-option" data-subgroup="strap-clasp" hidden>
+              <div class="sub-option__label">链带扣子</div>
+              <div class="swatch-grid" data-group="clasp">
+                <button class="swatch is-selected" data-value="普通蝴蝶扣"><span class="swatch__chip" style="background:#c7cbcd;"></span><span>普通蝴蝶扣</span></button>
+                <button class="swatch" data-value="高级可调节扣"><span class="swatch__chip" style="background:#b8860b;"></span><span>高级可调节扣</span></button>
+              </div>
             </div>
           </div>
 
@@ -123,7 +140,67 @@
             </div>
             <div class="swatch-grid" data-group="movement">
               <button class="swatch is-selected" data-value="石英机芯"><span class="swatch__chip" style="background:#ddd;"></span><span>石英机芯</span></button>
-              <button class="swatch" data-value="自动机械"><span class="swatch__chip" style="background:#ddd;"></span><span>自动机械</span></button>
+              <button class="swatch" data-value="自动机械" data-mechanical="true"><span class="swatch__chip" style="background:#ddd;"></span><span>自动机械</span></button>
+            </div>
+            <div class="sub-option" data-subgroup="movement-origin" hidden>
+              <div class="sub-option__label">机芯产地</div>
+              <div class="swatch-grid" data-group="movementorigin">
+                <button class="swatch is-selected" data-value="日本 Miyota 9015"><span class="swatch__chip" style="background:#ddd;"></span><span>日本 Miyota 9015</span></button>
+                <button class="swatch" data-value="瑞士 Sellita"><span class="swatch__chip" style="background:#ddd;"></span><span>瑞士 Sellita</span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="option-group" data-subgroup="movement-cradle" hidden>
+            <div class="option-group__head">
+              <h3>机芯托</h3>
+              <span>MOVEMENT CRADLE · 自动机械可选</span>
+            </div>
+            <div class="swatch-grid" data-group="cradle">
+              <button class="swatch is-selected" data-value="无"><span class="swatch__chip" style="background:#f0f0f0;"></span><span>无</span></button>
+              <button class="swatch" data-value="定制机芯托"><span class="swatch__chip" style="background:#cfcfcf;"></span><span>定制机芯托</span></button>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <div class="option-group__head">
+              <h3>圈口</h3>
+              <span>BEZEL</span>
+            </div>
+            <div class="swatch-grid" data-group="bezel">
+              <button class="swatch is-selected" data-value="拉丝直身圈"><span class="swatch__chip" style="background:linear-gradient(135deg,#d8d8d8,#aaa);"></span><span>拉丝直身圈</span></button>
+              <button class="swatch" data-value="批花圈"><span class="swatch__chip" style="background:repeating-linear-gradient(45deg,#bbb 0 3px,#888 3px 6px);"></span><span>批花圈</span></button>
+              <button class="swatch" data-value="刻度圈"><span class="swatch__chip" style="background:#9a9a9a;"></span><span>刻度圈</span></button>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <div class="option-group__head">
+              <h3>表冠</h3>
+              <span>CROWN · 选填刻字</span>
+            </div>
+            <div class="swatch-grid" data-group="crown">
+              <button class="swatch is-selected" data-value="无特殊处理"><span class="swatch__chip" style="background:#cfcfcf;"></span><span>无特殊处理</span></button>
+              <button class="swatch" data-value="品牌刻字"><span class="swatch__chip" style="background:#b8860b;"></span><span>品牌刻字</span></button>
+            </div>
+            <div class="field" style="margin-top:0.8em;">
+              <label for="crown-text">表冠刻字内容<span class="opt">选填</span></label>
+              <input type="text" id="crown-text" placeholder="例如品牌英文名或 Logo 字母">
+            </div>
+          </div>
+
+          <div class="option-group">
+            <div class="option-group__head">
+              <h3>底盖</h3>
+              <span>CASE BACK</span>
+            </div>
+            <div class="swatch-grid" data-group="caseback">
+              <button class="swatch is-selected" data-value="密封底盖"><span class="swatch__chip" style="background:#cfcfcf;"></span><span>密封底盖</span></button>
+              <button class="swatch" data-value="透视底盖"><span class="swatch__chip" style="background:linear-gradient(135deg,#dbe9f7,#9ab);"></span><span>透视底盖</span></button>
+            </div>
+            <div class="field" style="margin-top:0.8em;">
+              <label for="caseback-text">底盖定制内容<span class="opt">选填</span></label>
+              <input type="text" id="caseback-text" placeholder="例如编号、Logo 或定制文字">
             </div>
           </div>
 
@@ -136,6 +213,17 @@
               <button class="swatch is-selected" data-value="无"><span class="swatch__chip" style="background:#f0f0f0;"></span><span>无</span></button>
               <button class="swatch" data-value="12点图腾装饰"><span class="swatch__chip" style="background:#e9c46a;"></span><span>12点图腾装饰</span></button>
               <button class="swatch" data-value="表圈镶嵌位"><span class="swatch__chip" style="background:#dde;"></span><span>表圈镶嵌位</span></button>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <div class="option-group__head">
+              <h3>预算</h3>
+              <span>BUDGET · 选填</span>
+            </div>
+            <div class="field">
+              <label for="budget-input">预估单只成本预算<span class="opt">选填，便于销售为客户配置报价</span></label>
+              <input type="number" id="budget-input" placeholder="例如：80（单位：USD）">
             </div>
           </div>
 
@@ -152,11 +240,15 @@
             <dl class="summary-list" id="summaryList">
               <dt>模具</dt><dd>MOLD-001 本本石</dd>
               <dt>材质</dt><dd id="sum-material">316L不锈钢</dd>
-              <dt>表面处理</dt><dd id="sum-finish">拉丝</dd>
               <dt>表盘</dt><dd id="sum-dial">太阳放射纹</dd>
               <dt>指针</dt><dd id="sum-hands">剑形指针</dd>
+              <dt>针数</dt><dd id="sum-handcount">三针设计</dd>
               <dt>表带</dt><dd id="sum-strap">棕色牛皮</dd>
+              <dt>表带颜色</dt><dd id="sum-strapcolor">棕色</dd>
               <dt>机芯</dt><dd id="sum-movement">石英机芯</dd>
+              <dt>圈口</dt><dd id="sum-bezel">拉丝直身圈</dd>
+              <dt>表冠</dt><dd id="sum-crown">无特殊处理</dd>
+              <dt>底盖</dt><dd id="sum-caseback">密封底盖</dd>
             </dl>
           </div>
         </aside>
