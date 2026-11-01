@@ -16,12 +16,13 @@
   <div class="container site-header__bar">
     <a href="index.html" class="site-header__brand">设计图纸 <small>WATCH RENDER TOOL</small></a>
     <nav class="site-header__nav">
-      <a href="full-custom.html">全非标定制</a>
-      <a href="mold-select.html">小批量半定制</a>
-      <a href="about.html">公司介绍</a>
-      <a href="sample-purchase.html">样品购买</a>
-      <a href="handbook.html">设计师手册</a>
-      <a href="#how">工作原理</a>
+      <a href="full-custom.html">专属开模定制</a>
+      <a href="mold-select.html">现成模具小批量试做</a>
+      <a href="about.html">关于我们</a>
+      <a href="about.html#qc">品质与物流</a>
+      <a href="sample-purchase.html">先买一只看看</a>
+      <a href="handbook.html">设计资源</a>
+      <a href="#how">怎么用</a>
     </nav>
     <div class="site-header__actions">
       <a href="inquiry.html" class="btn btn--primary btn--sm">获取报价</a>
@@ -35,14 +36,14 @@
   <section class="hero">
     <div class="container hero__grid">
       <div>
-        <div class="hero__eyebrow">报价前置 · 效果图生成</div>
-        <h1>把一张模具规格图，<br>变成您能看懂的<em>设计效果图</em></h1>
+        <div class="hero__eyebrow">先看效果图，再谈价格</div>
+        <h1>把您想要的手表<br>变成一张<em>看得懂的效果图</em></h1>
         <p class="hero__sub">
-          无论您需要全新开模的全非标定制，还是在现有模具范围内做小批量半定制，都能在询盘之前先把设计意图说清楚——用图说话，而不是用文字猜测。
+          不用懂工艺术语，点点选项就能看到效果——无论是想要完全专属的外观，还是想在现成款式上换个材质、换种风格，都能先看图再决定。
         </p>
         <div class="hero__ctas">
-          <a href="full-custom.html" class="btn btn--outline">全非标定制 →</a>
-          <a href="mold-select.html" class="btn btn--primary">小批量半定制 →</a>
+          <a href="full-custom.html" class="btn btn--outline">我想要专属设计 →</a>
+          <a href="mold-select.html" class="btn btn--primary">我想先试试现成款式 →</a>
         </div>
       </div>
       <div class="morph" id="heroMorph" tabindex="0" role="button" aria-pressed="false" aria-label="点击切换查看规格图与渲染图">
@@ -120,6 +121,28 @@
     </div>
   </section>
 
+  <!-- ============ SAME PATH, DIFFERENT STYLE ============ -->
+  <section class="section" id="style-switch">
+    <div class="container">
+      <div class="section__head">
+        <div class="section__eyebrow">现有模具 × 风格组合</div>
+        <h2>同样走"小批量半定制"，也能做出完全不同的气质</h2>
+        <p>点击切换查看——以下三款都是现有模具库里的真实设计，材质与表盘工艺不同，风格差异很大，并不是"套公模=千篇一律"。</p>
+      </div>
+      <div class="style-switch">
+        <div class="style-switch__stage">
+          <img src="assets/render_sample_1.png" alt="现有模具风格切换预览" id="styleSwitchImg">
+          <div class="style-switch__cap" id="styleSwitchCap">方案一「本本石」极简款 · Ø40mm</div>
+        </div>
+        <div class="style-switch__tabs">
+          <button class="style-switch__tab is-active" data-img="assets/render_sample_1.png" data-cap="方案一「本本石」极简款 · Ø40mm" type="button">极简款</button>
+          <button class="style-switch__tab" data-img="assets/render_sample_2.png" data-cap="方案二「Ramesses」运动潜水款" type="button">运动潜水款</button>
+          <button class="style-switch__tab" data-img="assets/render_sample_3.png" data-cap="方案三「Sungift」轻奢商务款" type="button">轻奢商务款</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ SCREEN 4 · MATERIAL SHOWCASE ============ -->
   <section class="section section--dim" id="materials">
     <div class="container">
@@ -160,38 +183,26 @@
       <div class="tiers">
         <!-- Full custom -->
         <article class="tier-card">
-          <div class="tier-card__kicker">全新开模</div>
+          <div class="tier-card__kicker">专属开模定制</div>
           <h3>全非标定制</h3>
-          <p class="tier-card__desc">从零设计表壳造型，不受现有模具库限制，适合希望打造专属外观、建立品牌差异化的客户。</p>
-          <dl class="tier-card__meta">
-            <div><dt>起订量</dt><dd>≥ 300 件</dd></div>
-            <div><dt>开模</dt><dd>允许全新开模</dd></div>
-            <div><dt>设计自由度</dt><dd>不受限</dd></div>
-            <div><dt>报价方式</dt><dd>人工销售对接</dd></div>
-          </dl>
+          <p class="tier-card__desc">从零设计表壳造型，不受现有模具库限制，造型、结构、工艺细节全部由您主导。</p>
           <ul class="tier-card__list">
-            <li>表壳结构与工艺细节完全由您主导，不受现有模具限制</li>
-            <li>由销售顾问与您一对一确认设计稿、CAD 图纸与开模细节</li>
-            <li>适合已有明确设计方向，或正在建立自有产品线的品牌</li>
+            <li><strong>适合你，如果你：</strong>想要市面上没有的专属外观，或正在打造自己的产品线</li>
+            <li>起订量 300 件起，需要开新模具，周期更长</li>
+            <li>由销售顾问一对一确认设计稿、CAD 图纸与开模细节，不走在线自动报价</li>
           </ul>
-          <a href="full-custom.html" class="btn btn--outline btn--block">了解全非标定制流程</a>
+          <a href="full-custom.html" class="btn btn--outline btn--block">了解专属开模定制</a>
         </article>
 
         <!-- Semi custom -->
         <article class="tier-card tier-card--semi">
-          <div class="tier-card__kicker">现有模具</div>
+          <div class="tier-card__kicker">现成模具小批量试做</div>
           <h3>小批量半定制</h3>
-          <p class="tier-card__desc">在现有模具规格范围内，组合材质、表盘、表带等要素，并用 AI 工具即时生成效果图预览。</p>
-          <dl class="tier-card__meta">
-            <div><dt>起订量</dt><dd>50 件起</dd></div>
-            <div><dt>开模</dt><dd>仅限现有模具</dd></div>
-            <div><dt>设计自由度</dt><dd>模具尺寸内自定义</dd></div>
-            <div><dt>报价方式</dt><dd>在线配置 + 询盘</dd></div>
-          </dl>
+          <p class="tier-card__desc">在现成模具范围内自由组合材质、表盘、表带，在线选、在线看效果图、在线报价。</p>
           <ul class="tier-card__list">
-            <li>提供模具型号卡片选择、结构化设计选项面板</li>
-            <li>支持生成「原型规格图」与「实物渲染图」两种效果图</li>
-            <li>适合快速打样、试水新渠道或控制起订成本的客户</li>
+            <li><strong>适合你，如果你：</strong>想快速试水、控制前期成本，或还没想好要不要开专属模具</li>
+            <li>50 件起订，不需要开模，周期更短</li>
+            <li>在线配置选项、即时生成效果图，提交询盘即可拿到报价</li>
           </ul>
           <a href="mold-select.html" class="btn btn--primary btn--block">开始选择模具型号</a>
         </article>
@@ -231,7 +242,7 @@
         <div class="guidance__icon">→</div>
         <div style="flex:1;">
           <h4>两条路径，随时可以切换</h4>
-          <p>即便从小批量半定制开始，后续想转向全非标开模，也可以直接联系销售顾问评估。先想买一只样表感受质感？可以从<a href="sample-purchase.html" style="text-decoration:underline;">样品购买</a>开始。</p>
+          <p>即便从小批量半定制开始，后续想转向全非标开模，也可以直接联系销售顾问评估。先想买一只样表感受质感？可以从<a href="sample-purchase.html" style="text-decoration:underline;">先买一只看看</a>开始。</p>
         </div>
         <a href="inquiry.html" class="btn btn--brass">获取报价</a>
       </div>

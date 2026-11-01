@@ -17,12 +17,13 @@
   <div class="container site-header__bar">
     <a href="index.html" class="site-header__brand">设计图纸 <small>WATCH RENDER TOOL</small></a>
     <nav class="site-header__nav">
-      <a href="full-custom.html">全非标定制</a>
-      <a href="mold-select.html" class="is-active">小批量半定制</a>
-      <a href="about.html">公司介绍</a>
-      <a href="sample-purchase.html">样品购买</a>
-      <a href="handbook.html">设计师手册</a>
-      <a href="index.html#how">工作原理</a>
+      <a href="full-custom.html">专属开模定制</a>
+      <a href="mold-select.html" class="is-active">现成模具小批量试做</a>
+      <a href="about.html">关于我们</a>
+      <a href="about.html#qc">品质与物流</a>
+      <a href="sample-purchase.html">先买一只看看</a>
+      <a href="handbook.html">设计资源</a>
+      <a href="index.html#how">怎么用</a>
     </nav>
     <div class="site-header__actions">
       <a href="inquiry.html" class="btn btn--primary btn--sm">获取报价</a>
@@ -232,8 +233,22 @@
         <!-- RIGHT: live preview -->
         <aside class="preview-panel">
           <div class="preview-panel__stage">
-            <span class="preview-panel__badge">实时预览 · 示意</span>
-            <img src="assets/render_sample_1.png" alt="当前设计组合预览" id="previewImg">
+            <span class="preview-panel__badge">实时示意 · 非最终效果图</span>
+            <div class="preview-watch" id="previewWatch">
+              <div class="preview-watch__strap preview-watch__strap--top" id="pvStrapTop" style="background:#4a3527;"></div>
+              <div class="preview-watch__strap preview-watch__strap--bottom" id="pvStrapBottom" style="background:#4a3527;"></div>
+              <div class="preview-watch__bezel" id="pvBezel" style="background:linear-gradient(135deg,#d8d8d8,#aaa);">
+                <div class="preview-watch__case" id="pvCase" style="background:#B9BEC2;">
+                  <div class="preview-watch__dial" id="pvDial" style="background:conic-gradient(#1B2430,#4A5A68,#1B2430);">
+                    <div class="preview-watch__hands" id="pvHands">
+                      <span class="preview-watch__hand preview-watch__hand--hour"></span>
+                      <span class="preview-watch__hand preview-watch__hand--minute"></span>
+                      <span class="preview-watch__hand preview-watch__hand--second" id="pvHandThird" hidden></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="preview-panel__summary">
             <h4>当前方案</h4>
@@ -250,9 +265,26 @@
               <dt>表冠</dt><dd id="sum-crown">无特殊处理</dd>
               <dt>底盖</dt><dd id="sum-caseback">密封底盖</dd>
             </dl>
+            <button class="btn btn--outline btn--block" id="exportPdfBtn" type="button" style="margin-top:var(--space-2);">导出当前方案 PDF →</button>
           </div>
         </aside>
 
+      </div>
+
+      <!-- ============ MOQ BATCH LIST ============ -->
+      <div class="batch-module">
+        <div class="batch-module__head">
+          <h3>我的拼单清单</h3>
+          <p>小批量半定制单次订单门槛是 <strong>50 件</strong>，但不要求 50 件都长一样——可以把几种不同材质/颜色的方案混在同一批订单里凑单。</p>
+        </div>
+        <button class="btn btn--outline" id="addToBatchBtn" type="button">+ 把当前方案加入拼单清单</button>
+        <div class="batch-list" id="batchList"></div>
+        <div class="batch-progress">
+          <div class="batch-progress__track">
+            <div class="batch-progress__fill" id="batchProgressFill" style="width:0%;"></div>
+          </div>
+          <p class="batch-progress__text" id="batchProgressText">还没有加入任何方案 · 目标 50 件起订</p>
+        </div>
       </div>
 
       <div class="generate-bar">

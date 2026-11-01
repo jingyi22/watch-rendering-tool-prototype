@@ -27,6 +27,64 @@
   object-fit: contain;
   transition: opacity var(--dur-med) var(--ease);
 }
+.preview-watch {
+  position: relative;
+  width: 55%;
+  aspect-ratio: 1/1.35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preview-watch__strap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44%;
+  height: 32%;
+  border-radius: var(--radius-s);
+  transition: background var(--dur-fast) var(--ease);
+}
+.preview-watch__strap--top { top: 0; }
+.preview-watch__strap--bottom { bottom: 0; }
+.preview-watch__bezel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+  transition: background var(--dur-fast) var(--ease);
+}
+.preview-watch__case {
+  width: 86%;
+  height: 86%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--dur-fast) var(--ease);
+}
+.preview-watch__dial {
+  width: 82%;
+  height: 82%;
+  border-radius: 50%;
+  position: relative;
+  transition: background var(--dur-fast) var(--ease);
+}
+.preview-watch__hands { position: absolute; inset: 0; }
+.preview-watch__hand {
+  position: absolute;
+  left: 50%; bottom: 50%;
+  width: 2px;
+  background: #eee;
+  transform-origin: bottom center;
+}
+.preview-watch__hand--hour { height: 24%; transform: translateX(-50%) rotate(45deg); }
+.preview-watch__hand--minute { height: 34%; width: 1.5px; transform: translateX(-50%) rotate(140deg); }
+.preview-watch__hand--second { height: 30%; width: 1px; background: #c0392b; transform: translateX(-50%) rotate(260deg); }
+
 .preview-panel__badge {
   position: absolute;
   top: var(--space-2); left: var(--space-2);
@@ -176,3 +234,69 @@
   .configurator { grid-template-columns: 1fr; }
   .preview-panel { position: static; }
 }
+
+/* ===== MOQ batch-mixing module ===== */
+.batch-module {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: #fff;
+  padding: var(--space-3);
+  margin-top: var(--space-4);
+}
+.batch-module__head h3 { font-size: 1rem; margin-bottom: 0.3em; }
+.batch-module__head p { font-size: 0.85rem; color: var(--ink-soft); margin-bottom: var(--space-2); }
+.batch-list { margin-top: var(--space-2); }
+.batch-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  margin-bottom: var(--space-1);
+  font-size: 0.85rem;
+}
+.batch-row__desc { flex: 1; color: var(--ink-soft); }
+.batch-row__desc strong { color: var(--ink); }
+.batch-row__qty {
+  width: 72px;
+  padding: 0.3em 0.5em;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  font-family: var(--font-mono);
+  text-align: center;
+}
+.batch-row__remove {
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.batch-row__remove:hover { color: #c0392b; }
+.batch-progress { margin-top: var(--space-2); }
+.batch-progress__track {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--paper-dim);
+  overflow: hidden;
+}
+.batch-progress__fill {
+  height: 100%;
+  background: #c0392b;
+  transition: width var(--dur-med) var(--ease), background var(--dur-med) var(--ease);
+}
+.batch-progress__fill.is-complete { background: #2e7d32; }
+.batch-progress__text { font-size: 0.8rem; color: var(--ink-soft); margin-top: 0.4em; }
+
+/* ===== Print export (PDF via browser print) ===== */
+@media print {
+  .site-header, .site-footer, .float-whatsapp,
+  .ai-guide-teaser, .options-col, .batch-module, .generate-bar,
+  .hero, #exportPdfBtn {
+    display: none !important;
+  }
+  .configurator { grid-template-columns: 1fr; }
+  .preview-panel { position: static; box-shadow: none; }
+}
+

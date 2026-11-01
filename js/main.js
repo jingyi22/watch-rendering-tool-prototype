@@ -21,6 +21,22 @@
   });
 })();
 
+// Style switch: same mold, click through different styles
+(function () {
+  const tabs = document.querySelectorAll('.style-switch__tab');
+  if (!tabs.length) return;
+  const img = document.getElementById('styleSwitchImg');
+  const cap = document.getElementById('styleSwitchCap');
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach((t) => t.classList.remove('is-active'));
+      tab.classList.add('is-active');
+      if (img) img.src = tab.dataset.img;
+      if (cap) cap.textContent = tab.dataset.cap;
+    });
+  });
+})();
+
 // Mark active nav link based on current page
 (function () {
   const path = window.location.pathname.split('/').pop() || 'index.html';

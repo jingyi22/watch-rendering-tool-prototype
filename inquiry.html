@@ -17,12 +17,13 @@
   <div class="container site-header__bar">
     <a href="index.html" class="site-header__brand">设计图纸 <small>WATCH RENDER TOOL</small></a>
     <nav class="site-header__nav">
-      <a href="full-custom.html">全非标定制</a>
-      <a href="mold-select.html">小批量半定制</a>
-      <a href="about.html">公司介绍</a>
-      <a href="sample-purchase.html">样品购买</a>
-      <a href="handbook.html">设计师手册</a>
-      <a href="index.html#how">工作原理</a>
+      <a href="full-custom.html">专属开模定制</a>
+      <a href="mold-select.html">现成模具小批量试做</a>
+      <a href="about.html">关于我们</a>
+      <a href="about.html#qc">品质与物流</a>
+      <a href="sample-purchase.html">先买一只看看</a>
+      <a href="handbook.html">设计资源</a>
+      <a href="index.html#how">怎么用</a>
     </nav>
     <div class="site-header__actions">
       <a href="inquiry.html" class="btn btn--primary btn--sm">获取报价</a>
@@ -45,7 +46,7 @@
 
       <div class="form-shell">
         <aside class="form-shell__notes">
-          <div class="form-notes">
+          <div class="form-notes" id="planNotes">
             <h4>已自动附带的方案信息</h4>
             <div class="result-meta" style="margin:0 0 var(--space-3);">
               <span>MOLD-001 本本石</span>
@@ -58,6 +59,29 @@
               <img src="assets/render_sample_1.png" alt="已生成的效果图" style="width:100%; display:block;">
             </div>
             <p>如需调整设计，请<a href="configurator.html" style="text-decoration:underline;">返回自定义设计页</a>——这里提交的询盘会使用当前这套方案。</p>
+          </div>
+
+          <div class="form-notes" id="batchNotes" style="display:none; margin-top:var(--space-3); padding-top:var(--space-3); border-top:1px dashed var(--line);">
+            <h4>拼单清单（跨配置混批）</h4>
+            <div id="batchNotesList"></div>
+          </div>
+
+          <div class="guidance" id="ddpBox" style="margin-top:var(--space-3);">
+            <div class="guidance__icon">$</div>
+            <div>
+              <h4>国际运费预估（DDP 含税到门）</h4>
+              <div class="field" style="margin-bottom:var(--space-2);">
+                <label for="ddp-region">目的地地区</label>
+                <select id="ddp-region">
+                  <option value="3.2-4.5">北美</option>
+                  <option value="2.8-3.8">欧洲</option>
+                  <option value="1.8-2.6">东南亚</option>
+                  <option value="2.5-4.0">其他地区</option>
+                </select>
+              </div>
+              <p id="ddpEstimate">选择地区后查看预估区间</p>
+              <p style="font-size:0.78rem;">此为占位区间，仅用于演示运费计算能力；<strong>实际费率以销售最终确认为准</strong>。</p>
+            </div>
           </div>
         </aside>
 
@@ -133,6 +157,76 @@ document.getElementById('submitInquiry').addEventListener('click', function (e) 
   this.textContent = '已提交 ✓';
   this.setAttribute('disabled', 'true');
 });
+
+// Pull in MOQ batch list from configurator (if any) and auto-sum quantity
+(function () {
+  let batchList = [];
+  try {
+    batchList = JSON.parse(localStorage.getItem('moqBatchList')) || [];
+  } catch (err) {
+    batchList = [];
+  }
+  if (!batchList.length) return;
+
+  const batchNotes = document.getElementById('batchNotes');
+  const batchNotesList = document.getElementById('batchNotesList');
+  if (batchNotes && batchNotesList) {
+    batchNotes.style.display = 'block';
+    const total = batchList.reduce((sum, row) => sum + row.qty, 0);
+    batchNotesList.innerHTML = batchList.map((row, idx) =>
+      `<div class="result-meta" style="margin:0 0 var(--space-1);"><span>方案${idx + 1} · ${row.qty}件</span><span>${row.desc}</span></div>`
+    ).join('') + `<p style="font-size:0.85rem; margin-top:var(--space-2);">合计 <strong>${total}</strong> 件，已自动填入下方预估数量</p>`;
+
+    const qtyInput = document.getElementById('iq-qty');
+    if (qtyInput) qtyInput.value = total;
+  }
+})();
+
+// DDP shipping estimate (placeholder range — pending sales confirmation)
+(function () {
+  const select = document.getElementById('ddp-region');
+  const out = document.getElementById('ddpEstimate');
+  if (!select || !out) return;
+
+  function render() {
+    let qty = 50;
+    const qtyInput = document.getElementById('iq-qty');
+    if (qtyInput && qtyInput.value) qty = parseInt(qtyInput.value, 10) || 50;
+    const [lo, hi] = select.value.split('-').map(Number);
+    out.innerHTML = `按 <strong>${qty}</strong> 件估算，DDP 国际运费约为 <strong>$${(qty * lo).toFixed(0)} – $${(qty * hi).toFixed(0)}</strong>（约 $${lo.toFixed(1)}–$${hi.toFixed(1)} / 件，含关税预缴）`;
+  }
+
+  select.addEventListener('change', render);
+  const qtyInput = document.getElementById('iq-qty');
+  if (qtyInput) qtyInput.addEventListener('input', render);
+  render();
+})();
+
+// #kit=swatch — switch form framing to Swatch Sample Kit request
+(function () {
+  const params = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+  if (params.get('kit') !== 'swatch') return;
+
+  const title = document.querySelector('.form-card__title');
+  if (title) title.textContent = '材质与表盘色卡资料包申请（$99）';
+
+  const heroSub = document.querySelector('.hero__sub');
+  if (heroSub) heroSub.textContent = '您正在申请 $99 色卡资料包——提交后销售顾问会与您确认邮寄地址与付款方式；$99 可在您首个正式订单中全额抵扣。';
+
+  const planNotes = document.getElementById('planNotes');
+  if (planNotes) planNotes.style.display = 'none';
+
+  const ddpBox = document.getElementById('ddpBox');
+  if (ddpBox) ddpBox.style.display = 'none';
+
+  const qtyField = document.getElementById('iq-qty');
+  if (qtyField) {
+    qtyField.closest('.field').style.display = 'none';
+  }
+
+  const notesField = document.getElementById('iq-notes');
+  if (notesField) notesField.placeholder = '如需指定邮寄地址或特定材质色卡，请在此说明';
+})();
 </script>
 </body>
 </html>
