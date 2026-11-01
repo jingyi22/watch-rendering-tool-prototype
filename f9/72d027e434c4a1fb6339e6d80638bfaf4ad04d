@@ -1,0 +1,61 @@
+index.html
+  s_8474454288cfa5::t_48c72b376a8483 245
+  s_8474454288cfa5::t_c009e8e0aa2534 124-145
+  s_8474454288cfa5::t_b7369cdb5edad8 39-40,42,45-46
+  s_8474454288cfa5::t_c829a5d75884ce 186,188,190-192,194,199,201,203-205
+  s_8474454288cfa5::t_f80cb6f48a61e5 19-25
+configurator.html
+  s_8474454288cfa5::t_ca00b9d69c02f6 20-26
+  s_8474454288cfa5::t_d754cf01feaae8 274-289
+  s_8474454288cfa5::t_a7d0aa1d895f68 236-251,268
+handbook.html
+  s_8474454288cfa5::t_35233ddb8c8384 21-27
+js/configurator.js
+  s_8474454288cfa5::t_75a61c8cff2ac9 102-187
+  s_8474454288cfa5::t_7bce5aafcf5877 20-42,52
+js/main.js
+  s_8474454288cfa5::t_291cbf063d6f4e 24-39
+mold-select.html
+  s_8474454288cfa5::t_d6f1388bfaa7a1 20-26
+css/configurator.css
+  s_8474454288cfa5::t_fe43b2947747ef 30-87
+  s_8474454288cfa5::t_2040d842a14844 237-302
+css/home.css
+  s_8474454288cfa5::t_ef9db48a77bb5a 286-329
+  s_8474454288cfa5::t_f3f50f91a9a474 343
+  s_8474454288cfa5::t_3e01a8244ba509 366
+inquiry.html
+  s_8474454288cfa5::t_6b1ca5ef1ad7c8 49,63-84
+  s_8474454288cfa5::t_9ec4d8e9ffb0a7 20-26
+  s_8474454288cfa5::t_7de5976b9e28c4 160-204,206,208-229
+  s_8474454288cfa5::t_cc0c573d8c6c5e 205,207
+full-custom.html
+  s_8474454288cfa5::t_6e46980427bf8c 20-26
+about.html
+  s_8474454288cfa5::t_58db7410c92f6a 19-25
+  s_8474454288cfa5::t_c001d8ddb3caa6 81-120
+ai-guide.html
+  s_8474454288cfa5::t_edac9f66ab35e7 20-26
+result.html
+  s_8474454288cfa5::t_edd9168f0a4b9c 20-26
+sample-purchase.html
+  s_8474454288cfa5::t_499ef527adc57c 19-25
+  s_8474454288cfa5::t_ed7d53f29afd78 96
+  s_8474454288cfa5::t_c201f0919ef06c 66-95,97-100
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.51-trip",
+  "base_commit_sha": "f972d027e434c4a1fb6339e6d80638bfaf4ad04d",
+  "prompts": {},
+  "sessions": {
+    "s_8474454288cfa5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fc4fb4a3-90db-4657-998d-89eedb77e2f3",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Elena Lu （陆靖沂） <elenalu@trip.com>"
+    }
+  }
+}
