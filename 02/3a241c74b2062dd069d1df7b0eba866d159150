@@ -1,0 +1,26 @@
+js/quote.js
+  s_8474454288cfa5::t_4b3a989a38972e 1-132
+css/quote.css
+  s_8474454288cfa5::t_f296455f7b3c70 1-391,395-406
+  s_8474454288cfa5::t_7ee71a1a85fb59 392-394
+index.html
+  s_8474454288cfa5::t_b015c323f5fa12 12
+  s_8474454288cfa5::t_0b0bff681daa37 548
+  s_8474454288cfa5::t_9931757bf069ad 134-137,139-141,143-203,206-209,212,214-216,220,222-224,228,230-232,236,238-240,244-256,258-276,278-415,420-421,423-425,427-428,430-434,436-439,443-445,447-450,454-456,458-461
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.52-trip",
+  "base_commit_sha": "023a241c74b2062dd069d1df7b0eba866d159150",
+  "prompts": {},
+  "sessions": {
+    "s_8474454288cfa5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fc4fb4a3-90db-4657-998d-89eedb77e2f3",
+        "model": "deepseek-v4-1-flash-261017"
+      },
+      "human_author": "Elena Lu （陆靖沂） <elenalu@trip.com>"
+    }
+  }
+}
